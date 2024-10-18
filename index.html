@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <title>Highlight</title>
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title></title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Highlight: Learning Visual Prompts for Vision-Language Models</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="" target="_blank">Jana Zeller</a>,</span>
+                <span class="author-block">
+                  <a href="https://suny-sht.github.io/" target="_blank">Aleksandar (Suny) Shtedritski</a>,</span>
+                  <span class="author-block">
+                    <a href="https://chrirupp.github.io/" target="_blank">Christian Rupprecht</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-6 publication-authors">
+                    <span class="author-block text-muted">{jana, suny, chrisr}@robots.ox.ac.uk</span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Visual Geometry Group, University of Oxford</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+                    </a>
+                  </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h2 class="subtitle has-text-justified">
+        Given an image collection and, optionally, image descriptions, we automatically learn a Highlight to prompt images.
+        Highlight outperforms a red circle by 15% on the RefCOCO, RefCOCO+ and RefCOCOg datasets, on average. 
+      </h2>
+      <!-- <img src="static/images/teaser.png" alt=""/> -->
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/teaser.mp4"
+        type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Large-scale Vision-Language Models, such as CLIP, demonstrate impressive capabilities and have multiple applications, from text-to-image generation to zero-shot
+            classification. Recent work has suggested that visual prompts, such as a red circle,
+            can steer the vision encoder to the circled region. While such vision prompts have
+            now been used in various applications, they might be model-specific and depend
+            on the model learning these behaviours from its training data. Discovering and
+            evaluating various prompts might not be feasible given different models, tasks, and
+            datasets. In this paper, we propose Highlight, a method to learn a visual prompt
+            that highlights a region in an image or refines a manually engineered visual prompt.
+            Using our framework, we can learn to highlight in a supervised way using a dataset
+            of text-image region pairs or in an unsupervised way using synthetic captions
+            or images only. Highlight outperforms other visual prompts, prompt learning
+            approaches, and compute-intensive methods that use ensembles of multiple models
+            and visual prompts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Methods -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <img src="static/images/method.png" alt=""/>
+        <div class="content has-text-justified">
+          <p>
+            Highlight generates a visual prompt, which is then alpha-blended
+            with object proposals in the image. To learn the visual prompt, we construct positive and negative
+            pairs for each object using: (i) supervised text and bounding box pairs (e.g. from RefCOCO), (ii)
+            unsupervised text and bounding box pairs obtained by captioning the bounding box, (iii) a visual
+            representation of the object, e.g. a crop of the bounding box as in the Figure, or the original image,
+            visually prompted with a red circle. Here, (ii) and (iii) are unsupervised in that they do not require
+            manual text-image region annotations. The CLIP image and text encoder are kept frozen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Methods -->
+
+<!-- Results -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our supervised prompt outperforms prior works that use ensembles of several models and prompts, which require up to 6x more forward passes. Our unsupervised prompt outperforms all other single-prompts methods by 6.2% onaverage.
+          </p>
+        </div>
+        <img src="static/images/table.png" alt=""/>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Results -->
+
+<!-- Qual Results -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Optimised Highlights</h2>
+            <div id="results-carousel" class="carousel results-carousel">
+              <div class="item">
+                <img src="static/images/img-img-no-pre.png" />
+                <h2 class="subtitle has-text-centered">Image-Image Training and No Pretraining.</h2>
+              </div>
+              <div class="item">
+                <img src="static/images/img-img-pre.png" />
+                <h2 class="subtitle has-text-centered">Image-Image Training and Red Circle Pretraining.</h2>
+              </div>
+              <div class="item">
+                <img src="static/images/cap-img-no-pre.png" />
+                <h2 class="subtitle has-text-centered">Synthetic Captions-Image Training and No Pretraining.</h2>
+              </div>
+              <div class="item">
+                <img src="static/images/cap-img-pre.png" />
+                <h2 class="subtitle has-text-centered">Synthetic Captions-Image Training and Red Circle Pretraining.</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+<!-- End Qual Results -->
+
+
+
+<!--BibTex citation -->
+  <section class="section hero is-light" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+        <pre><code>@misc{zeller2024highlight,
+          title={Highlight: Learning Visual Prompts for Vision-Language Models}, 
+          author={Jana Zeller and Aleksandar Shtedritski and Christian Rupprecht},
+          year={2024},
+          eprint={<b>TODO</b>},
+          archivePrefix={arXiv},
+          primaryClass={cs.LG}
+      }</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
