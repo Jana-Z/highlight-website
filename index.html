@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Given an image collection and, optionally, image descriptions, we automatically learn a Highlight to prompt images. Highlight outperforms a red circle by 15% on the RefCOCO, RefCOCO+ and RefCOCOg datasets, on average.">
+  <meta name="description" content="Discover Highlight, a new method that enhances vision-language models by automatically learning visual prompts, improving image detection and localization tasks by 15%.">
   <meta property="og:title" content="Highlight: Learning Visual Prompts for Vision-Language Models"/>
-  <meta property="og:description" content="Given an image collection and, optionally, image descriptions, we automatically learn a Highlight to prompt images. Highlight outperforms a red circle by 15% on the RefCOCO, RefCOCO+ and RefCOCOg datasets, on average."/>
-  <meta property="og:url" content="https://jana-z.github.io/highlight-website/"/>
+  <!-- <meta property="og:description" content="Given an image collection and, optionally, image descriptions, we automatically learn a Highlight to prompt images. Highlight outperforms a red circle by 15% on the RefCOCO, RefCOCO+ and RefCOCOg datasets, on average."/>
+  <meta property="og:url" content="https://jana-z.github.io/highlight-website/"/> -->
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/images/teaser.png" />
+  <!-- <meta property="og:image" content="static/images/teaser.png" />
   <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
+  <meta property="og:image:height" content="630"/> -->
 
   <title>Highlight</title>
 
   <meta name="twitter:title" content="Highlight: Learning Visual Prompts for Vision-Language Models">
-  <meta name="twitter:description" content="Given an image collection and, optionally, image descriptions, we automatically learn a Highlight to prompt images. Highlight outperforms a red circle by 15% on the RefCOCO, RefCOCO+ and RefCOCOg datasets, on average.">
+  <meta name="twitter:description" content="Discover Highlight, a new method that enhances vision-language models by automatically learning visual prompts, improving image detection and localization tasks by 15%.">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/teaser.png">
+  <!-- <meta name="twitter:image" content="static/images/teaser.png"> -->
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="self-supervised learning, visual prompting">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -191,17 +191,55 @@
 <!-- End Methods -->
 
 <!-- Results -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Results</h2>
-        <div class="content has-text-justified">
-          <p>
-            Our supervised prompt outperforms prior works that use ensembles of several models and prompts, which require up to 6x more forward passes. Our unsupervised prompt outperforms all other single-prompts methods by 6.2% onaverage.
-          </p>
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Results</h2>
+            <div class="content has-text-justified">
+              <p>
+                Our supervised prompt outperforms prior works that use ensembles of several models and prompts, which require up to 6x more forward passes. Our unsupervised prompt outperforms all other single-prompts methods by 6.2% onaverage.
+              </p>
+            </div>
+            <img class="blend-img-background center-image" src="static/images/tables/main.png" alt=""/>
+            <div class="publication-authors">
+              &dagger; as reported by <a target="_blank" href="https://arxiv.org/abs/2406.03303">Razei et al.</a> &ddagger; as reported by <a target="_blank" href="https://arxiv.org/abs/2304.06712">Shtedritski et al.</a>
+            </div>
+            <div id="results-carousel" class="carousel results-carousel">
+              <div class="item">
+                <h3 class="title is-size-5">
+                  Different Target Prompt Functions
+                </h3>
+                <img src="static/images/tables/table_different_f_star.png">
+                <p class="has-text-justified subtitle is-size-6">
+                  When training with our proposed image-image loss Highlight can be used to optimise existing prompts.
+                  We see the biggest gains when using Crop, but the best performance when using Reverse Blur.
+                </p>
+              </div>
+              <div class="item">
+                <h3 class="title is-size-5">
+                  Pretraining Improves Performance
+                </h3>
+                <img src="static/images/tables/table_pretraining.png">
+                <p class="content has-text-justified subtitle is-size-6">
+                  We compare training a Highlight from scratch with pretraining the Highlight to output a red circle initially.
+                  We observe that the weaker the learning signal is, i.e. the weaker the supervsion is, the more important it is to pretrain Highlight meaningfully.
+                </p>
+              </div>
+              <div class="item">
+                <h3 class="title is-size-5">
+                  Different Pretraining Shapes
+                </h3>
+                <img src="static/images/tables/pretrain.png">
+                <p class="content has-text-justified subtitle is-size-6">
+                    We train with our proposed Image-Image loss with different pretrain shapes and see that it is not only important to pretrain, but also colour and shape have an effect on the final result.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <img src="static/images/table.png" alt=""/>
       </div>
     </div>
   </div>
@@ -242,11 +280,37 @@
 </section>
 <!-- End Qual Results -->
 
+<!-- Results for other models -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">More Models</h2>
+            <div class="content has-text-justified">
+              <p>
+                We train Highlight in the three different modes, (i)
+                unsupervised im2im, using image-image pairs only, (ii) unsupervised t2im, using synthetic text-
+                image pairs, and (iii) supervised t2im, using ground truth text-image pairs. Overall, we see that
+                pretraining improves performance in the unsupervised image-image regime, and does not help or
+                hurts performance when either ground-truth or unsupervised captions are used.
+              </p>
+            </div>
+            <img class="blend-img-background center-image" src="static/images/tables/table_different_models.png" alt=""/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- End Results for other models -->
+
 
 
 <!--BibTex citation -->
-  <section class="section hero is-light" id="BibTeX">
-    <div class="container is-max-desktop content">
+  <section class="section hero" id="BibTeX">
+    <div class="container content">
       <h2 class="title">BibTeX</h2>
         <pre><code>@misc{zeller2024highlight,
           title={Highlight: Learning Visual Prompts for Vision-Language Models}, 
